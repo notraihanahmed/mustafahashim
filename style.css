@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --first-color: #bce6ff;
+    --second-color: #4bbbe0;
+    --third-color: #015c92;
+    --dark-color: #333;
+}
+a {
+  	color: var(--third-color);
+  	text-decoration: underline .1em;
+  	text-underline-offset: .1em;
+  	transition: .3s ease;
+}
+a:hover,
+a:focus {
+  	text-underline-offset: .3em;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background: /* linear-gradient(45deg, var(--third-color), var(--first-color)) */ var(--first-color);
+    color: var(--third-color);
+}
+.container {
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+} 
+.author-info img {
+    height: 30vh;
+    width: 30vh;
+    margin: .5rem;
+    border-radius: 100vh;
+    border: 2px solid var(--third-color);
+    box-shadow: 0 0 20px var(--third-color);
+    transition: .5s ease;
+}
+.author-info img:hover {
+    box-shadow: 0 0 40px var(--third-color);
+    transform: scale(1.05);
+}
+.author-info hr {
+    border-color: var(--third-color);
+}
+.text-animation {
+    min-width: 280px;
+}
+.text-animation span {
+    position: relative;
+    font-weight: bold;
+}
+.text-animation span::before {
+    content: "Video Grapher";
+    animation: words 25s infinite;
+}
+.text-animation span::after {
+    content: "";
+    background: var(--first-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 2px solid var(--third-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 25s steps(14) infinite;
+}
+@keyframes cursor {
+    to {border-left: none;}
+}
+@keyframes words {
+    0%, 20% {content: "Video Grapher";}
+    21%, 40% {content: "Motion Grapher";}
+    41%, 60% {content: "Graphic Designer";}
+    61%, 80% {content: "YouTuber";}
+    81%, 100% {content: "Islamic Artist";}
+}
+@keyframes typing{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+      width: 0;
+}
+
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+      width: calc(100% + 8px);
+}
+}
+.link-list {
+    margin: 1rem 0;
+}
+.link-list a {
+    display: block;
+    width: 15rem;
+    margin: .3rem auto;
+    padding: .5rem;
+    border: 1px solid var(--third-color);
+    border-radius: 100vh;
+    box-shadow: 0 0 5px var(--third-color);
+    transition: .5s ease;
+}
+.link-list a:hover, .link-list a:focus {
+    background: var(--third-color);
+    color: var(--first-color);
+    transform: scale(.95);
+}
+.copyright {
+    font-size: .8rem;
+}
