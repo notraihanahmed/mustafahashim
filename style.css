@@ -33,7 +33,9 @@ body {
 } 
 .author-info img {
     height: 30vh;
+    max-height: 25rem;
     width: 30vh;
+    max-width: 25rem;
     margin: .5rem;
     border-radius: 100vh;
     border: 2px solid var(--third-color);
