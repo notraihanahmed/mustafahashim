@@ -110,3 +110,10 @@ body {
 .copyright {
     font-size: .8rem;
 }
+.about-texts {
+    margin: 1rem 0;
+    font-size: .85rem;
+}
+.contact {
+    margin-bottom: 2rem;
+}
